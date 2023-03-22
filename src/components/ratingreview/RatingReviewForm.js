@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
-import { createGame, getGameTypes } from '../../managers/GameManager.js'
+import { newRating, newReview, newRatingReview } from "../../managers/ReviewManager"
 
 export const RatingReviewForm = () => {
     const navigate = useNavigate()
@@ -111,31 +111,31 @@ export const RatingReviewForm = () => {
                                 value={currentRating.steep}
                                 onChange={changeRatingState}>
                                 <option value="0">Please Select One</option>
-                                <option key={`steep--1`} value="1">1: Path is too narrow/ lacks space for bikers and hikers with mobility aids</option>
+                                <option key={`steep--1`} value="1">1: Path is very steep</option>
                                 <option key={`steep--2`} value="2">2</option>
-                                <option key={`width--3`} value="3">3: Path is wide enough for some hikers</option>
-                                <option key={`width--4`} value="4">4</option>
-                                <option key={`width--5`} value="5">5: Path is wide enough for hikers to pass one another safely</option>
+                                <option key={`steep--3`} value="3">3: Path is moderately steep</option>
+                                <option key={`steep--4`} value="4">4</option>
+                                <option key={`steep--5`} value="5">5: Path is flat</option>
                         </select>
                 </div>
             </fieldset>
-
             <button type="submit"
-                onClick={evt => {
-                    // Prevent form from being submitted
-                    evt.preventDefault()
-
-                    const game = {
-                        name: currentGame.name,
-                        description: currentGame.description,
-                        game_type: parseInt(currentGame.game_type)
-                    }
-
-                    // Send POST request to your API
-                    createGame(game)
-                        .then(() => navigate("/"))
+                onClick={event => {
+                    event.preventDefault()
+                    newRating(currentRating)
+                    .then((ratingresponse) => {
+                        if (currentReview.review !== "") {
+                            newReview(currentReview).then((reviewresponse) => {
+                                newRatingReview({
+                                    rating: ratingresponse.id,
+                                    review: reviewresponse.id
+                                })
+                            })
+                        }
+                    }).then(navigate(`/trails/${trailId}`))
+                    .catch(error => console.error (error))
                 }}
-                className="btn btn-primary">Create</button>
+                >Submit</button>
         </form>
     )
 }

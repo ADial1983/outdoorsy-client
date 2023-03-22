@@ -32,7 +32,7 @@ return (
                 <div className="trail__description">{currentTrail.description}</div>
                         
                 <div className="trail__reviews">Reviews</div>
-                <button onClick={() => navigate(`/reviews/new`)}>Rate and Review</button>
+                <button onClick={() => navigate(`/reviews/new/${trailId}`)}>Rate and Review</button>
                 <section className="review_list">
                     <ReviewList trailId={trailId}/>
                 </section>      
