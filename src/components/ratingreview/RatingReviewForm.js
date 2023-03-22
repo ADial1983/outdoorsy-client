@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
-import { newRating, newReview, newRatingReview } from "../../managers/ReviewManager"
+import { newRating, newReview, newRatingReview, getReviewsByTrail } from "../../managers/ReviewManager"
 import "./RatingReviewForm.css"
 
 export const RatingReviewForm = () => {
@@ -42,6 +42,7 @@ export const RatingReviewForm = () => {
         copy[domEvent.target.name] = domEvent.target.value
         setCurrentRating(copy)
     }
+
 
     return (
         <form className="RatingForm">

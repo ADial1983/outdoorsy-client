@@ -8,8 +8,12 @@ export const ReviewList = ({trailId}) => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        getAllReviews()
-    }, [])
+        async function fetchReviews() {
+            const fetchedReviews = await getReviewsByTrail(trailId);
+            setReviews(fetchedReviews);
+        }
+        fetchReviews();
+    }, [trailId]);
 
     const getAllReviews = () => {
         getReviewsByTrail(trailId).then(data => setReviews(data))

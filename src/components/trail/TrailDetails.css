@@ -60,4 +60,16 @@
     margin-top: 20px;
   }
   
+  .trail__ratings {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8em;
+  }
+  
+  .trail__ratings > div {
+    flex-basis: 50%;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
   

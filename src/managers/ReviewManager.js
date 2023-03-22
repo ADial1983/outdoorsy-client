@@ -44,6 +44,15 @@ export const newRating = (rating) => {
     .then(response => response.json())
 }
 
+export const getRatingsByTrail = (trailId) => {
+    return fetch(`http://localhost:8000/ratings?trail=${trailId}`, {
+        headers:{
+            "Authorization": `Token ${localStorage.getItem("outdoorsy_user")}`
+        }
+    })
+        .then(response => response.json())
+}
+
 export const updateRating = (id, rating) => {
     return fetch(`http://localhost:8000/ratings/${id}`, {
         method: "PUT", 
