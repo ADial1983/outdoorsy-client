@@ -8,6 +8,7 @@ export const NavBar = () => {
         <ul className="navbar">
             {
                 (localStorage.getItem("outdoorsy_user") !== null) ?
+                <>
                     <li className="nav-item">
                         <button className="nav-link fakeLink"
                             onClick={() => {
@@ -15,7 +16,15 @@ export const NavBar = () => {
                                 navigate('/login')
                             }}
                         >Logout</button>
-                    </li> :
+                    </li>
+                    <li className="nav-item">
+                        <button className="nav-link fakeLink"
+                            onClick={() => {
+                                navigate("/home")
+                            }}
+                        >Home</button>
+                    </li>
+                    </> :
                     <>
                         <li className="nav-item">
                             <Link className="nav-link" to="/login">Login</Link>

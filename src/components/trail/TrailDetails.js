@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { getSingleTrail } from "../../managers/TrailManager" 
 import { ReviewList } from "../ratingreview/ReviewList"
+import "./TrailDetails.css"
 
 export const TrailDetails = () => {
     const navigate = useNavigate()

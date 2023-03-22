@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
 import { newRating, newReview, newRatingReview } from "../../managers/ReviewManager"
+import "./RatingReviewForm.css"
 
 export const RatingReviewForm = () => {
     const navigate = useNavigate()

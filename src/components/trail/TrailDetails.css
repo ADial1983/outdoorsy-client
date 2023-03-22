@@ -1,0 +1,63 @@
+.trail-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .trail-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .trail-details li {
+    margin-bottom: 10px;
+  }
+  
+  .trail-details h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .trail-details .trail__name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .trail-details .trail__length {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .trail-details .trail__description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .trail-details .trail__reviews {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .trail-details button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #668000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  button:hover {
+    background-color: #526600;
+  }
+  
+  .trail-details .review_list {
+    margin-top: 20px;
+  }
+  
+  

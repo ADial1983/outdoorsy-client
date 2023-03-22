@@ -1,62 +1,105 @@
-.h1, h1 {
-    font-size: 2.5rem;
-}
-
-fieldset {
-    min-width: 0;
-    padding: 1rem 0;
-    margin: 0;
-    border: 0;
-}
-
-.form--login {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.form--login > fieldset > input[type="email"] {
-    width: 25em;
-}
-
-.label--login {
-    width: 8rem;
-    display: inline-block;
-}
-
-.form-control {
-    display: block;
-    width: 94%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
 .container--login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .dialog--auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .button--close {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .form--login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .form--login h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .form--login h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form--login fieldset {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border: none;
+  }
+  
+  .form--login label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form--login input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #668000;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
-}
-
-.form--login {
-    background-position-x: right;
-    z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-}
-
-.button--close {
-    position: relative;
-    bottom: -2rem;
-}
+    text-decoration: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #526600;
+  }
+  
+  .btn-1 {
+    background-color: #668000;
+    border-color: #668000;
+    color: #fff;
+  }
+  
+  .btn-sep {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
 

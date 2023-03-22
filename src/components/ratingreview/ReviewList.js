@@ -1,6 +1,7 @@
 import { getReviews, getReviewsByTrail, deleteReview } from "../../managers/ReviewManager"
 import React, { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
+import "./ReviewList.css"
 
 export const ReviewList = ({trailId}) => {
     const [ reviews, setReviews ] = useState([])

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { getTrails } from "../../managers/TrailManager.js"
 import { useNavigate } from "react-router-dom"
+import "./TrailList.css"
 
 export const TrailList = (props) => {
     const [ trails, setTrails ] = useState([])
